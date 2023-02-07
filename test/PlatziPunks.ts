@@ -1,5 +1,5 @@
-import { expect } from "chai";
 import { ethers } from "hardhat";
+import { expect } from "chai";
 
 describe("PlatziPunks Contract", () => {
 	const setup = async ({ maxSupply = 1000 }) => {
@@ -69,7 +69,7 @@ describe("PlatziPunks Contract", () => {
 
 			const metadata = JSON.parse(stringifiedMetadata);
 
-			expect(metadata).to.have.all.keys("name", "description", "image");
+			expect(metadata).to.have.all.keys("name", "description", "image", "symbol", "tokenId");
 		});
 	});
 });
